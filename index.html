@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>I'm Sorry 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(#ffd6e8, #fff0f5);
+  text-align: center;
+}
+
+.page {
+  display: none;
+  padding: 30px;
+}
+
+.page.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 350px;
+  margin: auto;
+}
+
+h1 {
+  color: #ff4d88;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4d88;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1a66;
+}
+
+.teddy {
+  font-size: 80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div class="page active">
+  <div class="card">
+    <h1>Hey im Rasul
+    this is for yo 🥺</h1>
+    <p>I have something to say…</p>
+    <button onclick="nextPage()">Next 💗</button>
+  </div>
+</div>
+
+<!-- Page 2 -->
+<div class="page">
+  <div class="card">
+    <div class="teddy">🧸</div>
+    <h1>I'm Sorry 💔</h1>
+    <p>I never wanted to hurt you.</p>
+    <button onclick="nextPage()">Next 🌸</button>
+  </div>
+</div>
+
+<!-- Page 3 -->
+<div class="page">
+  <div class="card">
+    <h1>Please Forgive Me 🥹</h1>
+    <p>You mean a lot to me 💖<br>
+       I promise I'll try my best.</p>
+    <button onclick="nextPage()">One More 💝</button>
+  </div>
+</div>
+
+<!-- Page 4 -->
+<div class="page">
+  <div class="card">
+    <div class="teddy">🐻💗</div>
+    <h1>Sorry Once Again</h1>
+    <p>plzzzzz maf kar dooo 🤗<br>
+       & lots of love 💕</p>
+    <p>-- From Me 🌷</p>
+  </div>
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll(".page");
+
+function nextPage() {
+  pages[current].classList.remove("active");
+  current++;
+  if (current < pages.length) {
+    pages[current].classList.add("active");
+  }
+}
+</script>
+
+</body>
+</html>
